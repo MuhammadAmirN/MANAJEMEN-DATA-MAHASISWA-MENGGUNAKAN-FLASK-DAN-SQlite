@@ -1,0 +1,176 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #525253;
+    margin: 0;
+    padding: 20px;
+}
+
+/* ==== KARTU UTAMA ==== */
+.card {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 40px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Watermark */
+.card::before {
+    content: "UDB SURAKARTA";
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 70px;
+    font-weight: 800;
+    color: rgba(0, 0, 255, 0.05);
+    letter-spacing: 3px;
+    white-space: nowrap;
+    user-select: none;
+    z-index: 0;
+}
+
+.card * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Judul */
+h1 {
+    text-align: center;
+    color: #2d3436;
+    margin-bottom: 50px;
+}
+
+/* ==== TOMBOL ==== */
+.button {
+    display: inline-block;
+    padding: 8px 14px;
+    color: #fff;
+    border-radius: 6px;
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+.button:hover {
+    transform: scale(1.05);
+}
+
+/* Warna tombol */
+.button-green { background: #27ae60;
+top: 50px; }
+.button-green:hover { background: #219150; }
+
+.button-blue { background: #007bff; }
+.button-blue:hover { background: #0069d9; }
+
+.button-red { background: #e74c3c; }
+.button-red:hover { background: #c0392b; }
+
+/* Tombol utama di atas tabel */
+.action-top {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 25px;
+}
+
+.action-top .button {
+    font-size: 15px;
+}
+
+/* ==== TABEL ==== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+}
+
+tr:hover {
+    background-color: #f2f2f2;
+}
+
+/* ==== FORM TAMBAH & EDIT ==== */
+.form-card {
+    max-width: 600px;
+    margin: 80px auto;
+    padding: 40px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Watermark form */
+.form-card::before {
+    content: "UDB SURAKARTA";
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    font-weight: 800;
+    color: rgba(0, 0, 255, 0.04);
+    letter-spacing: 3px;
+    white-space: nowrap;
+    user-select: none;
+    z-index: 0;
+}
+
+/* Form */
+form { margin-top: 20px; }
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #000;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: 0.3s;
+    box-sizing: border-box;
+}
+
+input[type="text"]:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+/* Tombol bawah form */
+.form-button {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.form-button .button {
+    width: 130px;
+    margin: 0 5px;
+}

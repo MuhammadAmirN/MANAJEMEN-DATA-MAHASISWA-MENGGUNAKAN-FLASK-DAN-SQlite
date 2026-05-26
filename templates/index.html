@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Data Mahasiswa</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="card">
+        <h1>Daftar Mahasiswa</h1>
+
+
+        <div style="margin-bottom: 60px;">
+            <a href="{{ url_for('tambah') }}" class="button button-green">+ Tambah Data</a>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nama</th>
+                    <th>NIM</th>
+                    <th>Prodi</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                {% if mahasiswa %}
+                    {% for m in mahasiswa %}
+                    <tr>
+                        <td>{{ m.id }}</td>
+                        <td>{{ m.nama }}</td>
+                        <td>{{ m.nim }}</td>
+                        <td>{{ m.prodi }}</td>
+                        <td>
+                            <a href="{{ url_for('edit', id=m.id) }}" class="button button-blue">Edit</a>
+                            <a href="{{ url_for('hapus', id=m.id) }}" class="button button-red">Hapus</a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                {% else %}
+                    <tr>
+                        <td colspan="5" style="text-align:center; color:#777;">Belum ada data mahasiswa</td>
+                    </tr>
+                {% endif %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

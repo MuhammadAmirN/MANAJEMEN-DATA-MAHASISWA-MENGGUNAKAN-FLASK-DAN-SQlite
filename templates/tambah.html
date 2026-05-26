@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tambah Data Mahasiswa</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="form-card">
+        <h1>Tambah Data Mahasiswa</h1>
+
+        <form method="POST" action="{{ url_for('tambah') }}">
+            <div class="form-group">
+                <label>Nama</label>
+                <input type="text" name="nama" placeholder="Masukkan nama mahasiswa" required>
+            </div>
+
+            <div class="form-group">
+                <label>NIM</label>
+                <input type="text" name="nim" placeholder="Masukkan NIM mahasiswa" required>
+            </div>
+
+            <div class="form-group">
+                <label>Program Studi</label>
+                <input type="text" name="prodi" placeholder="Masukkan program studi" required>
+            </div>
+
+            <div class="form-button">
+                <a href="{{ url_for('index') }}" class="button button-red">Kembali</a>
+                <button type="submit" class="button button-green">Simpan</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
